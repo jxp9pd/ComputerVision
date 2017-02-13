@@ -1,0 +1,18 @@
+Canny Edge Detector:
+
+The canny edge detector follows four key steps:
+
+1. Image smoothing
+2. Computes smoothed gradients
+3. Non-maximum suppression
+4. Thresholding
+
+1. Image Smoothing
+The purpose of image smoothing is to reduce noise in the image so that the edge detector can differentiate between actual edges
+random specks etc. The first step is to convert the 3-color channel image into a 2-dimensional array of luminence intensities. I
+completed this process manually by iterating through every pixel in the image and running it through a standard conversion function.
+Now that we have the image in a useable format I convolve it with a 3*3 gaussian kernel.
+
+2. Computing Smoothed Gradients
+Now that the noise in the image has been removed or at least reduced we can proceed to actually distinguishing the changes of intensity
+that represent edges. 
